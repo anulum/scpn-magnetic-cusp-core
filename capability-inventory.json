@@ -1,0 +1,13 @@
+{
+  "capabilities": [],
+  "claims": [],
+  "evidence_maturity": "architecture_only",
+  "implemented_capability_count": 0,
+  "project": "SCPN-MAGNETIC-CUSP-CORE",
+  "schema": "scpn.capability-inventory.v1",
+  "schema_version": "1.0.0",
+  "source": {
+    "manifest_path": "reactor-domain.json",
+    "manifest_sha256": "406c8b5842f65b0ebdaabb797b0a4b217a268a6704c050f14ad38bdefb62c804"
+  }
+}
