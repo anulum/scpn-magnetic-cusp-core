@@ -1,13 +1,19 @@
 {
-  "capabilities": [],
+  "capabilities": [
+    {
+      "evidence_maturity": "computational_prototype",
+      "evidence_pointer": "VALIDATION.md#device-configuration-model",
+      "identifier": "device_configuration_model"
+    }
+  ],
   "claims": [],
-  "evidence_maturity": "architecture_only",
-  "implemented_capability_count": 0,
+  "evidence_maturity": "computational_prototype",
+  "implemented_capability_count": 1,
   "project": "SCPN-MAGNETIC-CUSP-CORE",
   "schema": "scpn.capability-inventory.v1",
   "schema_version": "1.0.0",
   "source": {
     "manifest_path": "reactor-domain.json",
-    "manifest_sha256": "406c8b5842f65b0ebdaabb797b0a4b217a268a6704c050f14ad38bdefb62c804"
+    "manifest_sha256": "0f1784e86f3d0b4fddb2f06a4d3b2f9c269b4c2317da147aff18eb3a2d06a303"
   }
 }
