@@ -4,16 +4,21 @@
       "evidence_maturity": "computational_prototype",
       "evidence_pointer": "VALIDATION.md#device-configuration-model",
       "identifier": "device_configuration_model"
+    },
+    {
+      "evidence_maturity": "computational_prototype",
+      "evidence_pointer": "VALIDATION.md#diagnostic-and-clock-semantics",
+      "identifier": "diagnostic_clock_semantics"
     }
   ],
   "claims": [],
   "evidence_maturity": "computational_prototype",
-  "implemented_capability_count": 1,
+  "implemented_capability_count": 2,
   "project": "SCPN-MAGNETIC-CUSP-CORE",
   "schema": "scpn.capability-inventory.v1",
   "schema_version": "1.0.0",
   "source": {
     "manifest_path": "reactor-domain.json",
-    "manifest_sha256": "0f1784e86f3d0b4fddb2f06a4d3b2f9c269b4c2317da147aff18eb3a2d06a303"
+    "manifest_sha256": "2c69be0dccd7f244bbe71fe9e59c6cab11d7c8c5306e7a0fe19e2e53653f54ce"
   }
 }
