@@ -42,7 +42,7 @@ from scpn_magnetic_cusp_core.plan_envelope import (
 )
 
 FIXTURE = Path(__file__).parent / "data" / "plan_envelope_fixture.json"
-FIXTURE_SHA256 = "0c3a995eaf75b96cbc5d32e673a74c5a89f65011a752b82fb0746864ef304520"
+FIXTURE_SHA256 = "b9a1f9a46a4d034b25d2cebd89b97e3729696f7e67910e6549c37057cf479b07"
 
 
 def fixture_document() -> dict[str, Any]:
