@@ -8,6 +8,11 @@ Contact: www.anulum.li | protoscience@anulum.li
 SCPN Magnetic Cusp Core — README
 -->
 
+<div align="center">
+  <img src="docs/assets/repo_header.png"
+       alt="SCPN Magnetic Cusp Core — Opposed Currents, Central Null">
+</div>
+
 # SCPN Magnetic Cusp Core
 
 Governed device-family repository for magnetic-cusp fusion systems within
