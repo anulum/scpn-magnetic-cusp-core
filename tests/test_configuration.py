@@ -99,7 +99,7 @@ def test_consistency_report_clean_and_finding() -> None:
     stretched = synthetic_configuration(coil_separation_m=2.0)
     findings = stretched.consistency_report()
     assert len(findings) == 1
-    assert "canonical spindle" in findings[0].message
+    assert "declared spindle-cusp window" in findings[0].message
     fence = synthetic_configuration(
         kind="picket_fence", coil_count=6, coil_separation_m=2.0
     )

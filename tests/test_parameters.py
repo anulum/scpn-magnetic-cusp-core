@@ -69,6 +69,16 @@ def test_loop_axis_field_formula() -> None:
     assert centre == pytest.approx(MU0 * 10.0e3 / (2.0 * 0.4))
 
 
+def test_opposed_loop_pair_has_a_central_field_null() -> None:
+    """Equal opposed loops cancel at the midplane; equal aligned loops add."""
+    for separation in (0.2, 0.4, 0.8, 1.6):
+        upper = loop_axis_field_t(10.0, 0.4, separation / 2.0)
+        lower = loop_axis_field_t(10.0, 0.4, -separation / 2.0)
+        assert upper - lower == 0.0
+        assert upper + lower == pytest.approx(2.0 * upper)
+        assert upper > 0.0
+
+
 def test_loop_axis_field_rejects_bad_arguments() -> None:
     """The loop-field helper validates its arguments."""
     with pytest.raises(DeviceConfigurationError, match="current_ka"):

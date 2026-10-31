@@ -309,7 +309,7 @@ def generate_spindle_cusp() -> None:
     ax.text(
         0,
         -1.36,
-        "spindle cusp · defining central field null (Berkowitz et al., 1958)",
+        "spindle cusp · opposed currents give a central field null",
         color="#445566",
         fontsize=7.5,
         fontfamily="monospace",

@@ -34,9 +34,11 @@ family pilot.
    registry pin. No claim about any real machine; every exercised
    parameter set is a synthetic test fixture.
 3. Hard class invariants: opposed neighbouring coil currents are
-   required — the central field null they produce is the defining
-   property of cusp confinement (J. Berkowitz et al., Proc. 2nd UN
-   Int. Conf. Peaceful Uses of Atomic Energy 31 (1958) 171). The
+   required — two equal coaxial loops with opposed currents cancel on
+   axis at the midplane, the central field null of cusp confinement
+   (derived from the loop formula below; the cusp concept goes back to
+   J. Berkowitz et al., Proc. 2nd UN Int. Conf. Peaceful Uses of Atomic
+   Energy 31 (1958) 171, which is not on file). The
    `spindle` class requires exactly two coils; the `picket_fence`
    class requires an even count of at least four (alternating
    currents close only on even arrays).
@@ -45,7 +47,7 @@ family pilot.
    magnetostatics) used by the spindle-pair helper. Advisory finding,
    reported by `consistency_report()` and never clamped: a spindle
    separation-to-radius ratio outside ``[0.5, 4]`` departs from the
-   canonical spindle-cusp arrangement (documented model bound).
+   spindle-cusp window (declared model bound).
 5. Repository-level `evidence_maturity` = the highest state claimed by
    any capability entry; per-capability states are the authoritative
    claim surface.
@@ -63,3 +65,12 @@ family pilot.
 - Later lanes (loss-flux diagnostic semantics, safety envelope) build
   on these types; maturity advances per capability only with the
   evidence the family standard requires.
+
+## Amendment 2026-10-31
+
+The opposed-current invariant was credited to Berkowitz et al. (1958),
+which is not on file. The central field null is now stated as derived
+from the on-axis loop formula and a test checks it for four
+separations. The ``[0.5, 4]`` spindle window is named a declared model
+bound, and the finding says "declared spindle-cusp window". No rule,
+value or check changed.

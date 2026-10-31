@@ -79,13 +79,15 @@ What is exercised, all under the 100 % statement-and-branch coverage gate:
 - Validated frozen parameter objects (`CuspGeometry`, `CoilDrive`,
   `DeviceConfiguration`) rejecting non-finite values, non-positive
   extents, and the hard class invariants: opposed neighbouring currents
-  (the defining central field null; Berkowitz et al., 1958), exactly
+  (the central field null, derived from the loop formula and tested;
+  the Berkowitz et al. 1958 credit, not on file, was removed on
+  2026-10-31), exactly
   two coils for the spindle class, and an even count of at least four
   for the picket fence — every rejection branch is tested.
 - The standard on-axis loop-field formula
   `B(z) = mu0 I R^2 / (2 (R^2 + z^2)^{3/2})` and the spindle-pair
   coil-plane helper built on it.
-- An advisory consistency finding with a documented model bound,
+- An advisory consistency finding with a declared model bound,
   reported and never clamped: a spindle separation-to-radius ratio
   outside `[0.5, 4]`.
 - Canonical serialisation (sorted keys, NaN/infinity rejected on both

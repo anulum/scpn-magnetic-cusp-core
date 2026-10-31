@@ -10,14 +10,17 @@
 
 A :class:`DeviceConfiguration` composes validated cusp geometry and coil
 drive under the single registry identifier this repository owns. Opposed
-neighbouring currents are a hard invariant (they create the defining
-central field null; J. Berkowitz et al., 1958), the spindle class
-carries exactly one opposed pair, and a spindle arrangement far from the
-canonical separation-to-radius window is flagged. Serialisation is
-canonical (sorted keys, no NaN or infinity accepted anywhere) and the
-SHA-256 digest of those bytes identifies the exact parameter set. The
-registry binding is a data pin only — this package never imports SCPN
-Phase Orchestrator code.
+neighbouring currents are a hard invariant: two equal coaxial loops with
+opposed currents give equal and opposite on-axis fields at the midplane,
+so the field there vanishes (the central field null, which follows from
+the loop formula in the parameter module and is tested). The cusp
+concept goes back to J. Berkowitz et al. (1958), which is not on file.
+The spindle class carries exactly one opposed pair, and a spindle
+arrangement outside the declared separation-to-radius window is flagged.
+Serialisation is canonical (sorted keys, no NaN or infinity accepted
+anywhere) and the SHA-256 digest of those bytes identifies the exact
+parameter set. The registry binding is a data pin only — this package
+never imports SCPN Phase Orchestrator code.
 """
 
 from __future__ import annotations
@@ -169,7 +172,7 @@ class DeviceConfiguration:
         Returns
         -------
         tuple of ConsistencyFinding
-            Advisory findings from the documented bounds; empty when
+            Advisory findings from the declared bounds; empty when
             the declared geometry sits in the canonical arrangement.
             Findings are advisory instruments, not machine claims.
         """
@@ -184,7 +187,7 @@ class DeviceConfiguration:
                         message=(
                             f"separation-to-radius ratio {ratio:.3f} is "
                             f"outside [{low}, {high}]; the arrangement "
-                            "departs from the canonical spindle cusp"
+                            "departs from the declared spindle-cusp window"
                         ),
                     )
                 )
