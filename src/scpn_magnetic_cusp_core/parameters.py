@@ -28,6 +28,14 @@ CUSP_KINDS: Final = ("picket_fence", "spindle")
 SPINDLE_COIL_COUNT: Final = 2
 PICKET_FENCE_MIN_COILS: Final = 4
 MU0: Final = 4.0e-7 * math.pi
+"""Vacuum permeability in H/m under the pre-2019 SI convention ``4 pi x 10^-7``.
+
+Since the 2019 SI revision the permeability is measured: CODATA 2018 gives
+``1.25663706212 x 10^-6``, about ``5.4 x 10^-10`` relative above the
+convention, and CODATA 2022 gives ``1.25663706127 x 10^-6``, about
+``1.3 x 10^-10`` below it. The on-axis loop field is linear in ``mu0`` and
+moves by the same relative amount, far below the advisory bands here.
+"""
 
 
 def require_finite(name: str, value: float) -> float:

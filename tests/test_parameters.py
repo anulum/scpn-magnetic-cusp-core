@@ -116,3 +116,15 @@ def test_invalid_drive_is_rejected() -> None:
         CoilDrive(coil_current_ka=0.0, opposed_neighbour_currents=True)
     with pytest.raises(DeviceConfigurationError, match="opposed"):
         CoilDrive(coil_current_ka=10.0, opposed_neighbour_currents=False)
+
+
+#: CODATA 2018 and 2022 recommended vacuum permeability, H/m (measured since 2019).
+CODATA_2018_MU0 = 1.25663706212e-6
+CODATA_2022_MU0 = 1.25663706127e-6
+
+
+def test_mu0_is_the_pre_2019_convention_and_its_offset_is_documented() -> None:
+    """MU0 is 4 pi x 10^-7; the measured editions differ as the docstring says."""
+    assert math.pi * 4.0e-7 == MU0
+    assert 5.0e-10 < (CODATA_2018_MU0 - MU0) / CODATA_2018_MU0 < 6.0e-10
+    assert -1.5e-10 < (CODATA_2022_MU0 - MU0) / CODATA_2022_MU0 < -1.0e-10

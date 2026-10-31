@@ -39,6 +39,10 @@ SCPN Magnetic Cusp Core — CHANGELOG
 
 ### Changed
 
+- `MU0` documents its convention: the pre-2019 SI value `4 pi x 10^-7` H/m,
+  about `5.4 x 10^-10` relative below CODATA 2018 and `1.3 x 10^-10` above
+  CODATA 2022; its value is unchanged and the offsets are bound by a test.
+
 - `scpn_magnetic_cusp_core.observability` is now a package with one module
   per responsibility — vocabulary, catalogue binding, frames, clocks, signals
   and channels, plan composition, record parsing — behind the unchanged
