@@ -126,8 +126,13 @@ What is exercised, all under the 100 % statement-and-branch coverage gate:
   release is rejected.
 - A reference plan mirroring canonical practice with synthetic
   declarations: cusp-loss probes, diamagnetic loop, drive reference, flute probe array, synthetic oscillator, each bound to its clock domain.
-- Documented advisory band checks with their sources stated in the
-  code: cusp interchange/flute activity in the 0.1–100 kHz scale and ICRF-to-ECRH drive frequencies (Berkowitz et al. 1958); findings are reported, never clamped.
+- Advisory checks against declared synthetic design bounds: an
+  interchange/flute band of 0.1–100 kHz, a drive band of 1 MHz–200 GHz and a
+  ~1 s confinement-duration bound. They were earlier credited to J.
+  Berkowitz et al., Proc. 2nd UN Conf. Peaceful Uses of Atomic Energy 31
+  (1958) 171, and R. F. Post (1987), neither of which is on file, so they
+  were never checked against them; the attribution was removed (2026-10-31).
+  Findings are reported, never clamped.
 - Canonical serialisation (sorted keys, NaN/infinity rejected on both
   emit and parse), SHA-256 digest identity, and a strict round-trip
   parser that refuses unknown fields.

@@ -49,7 +49,12 @@ bind. Four candidates apply to the configuration this repository owns: `open.dri
    clock).
 4. Timing is fail-closed where physics fixes the bound: the Nyquist
    criterion for both cyclic classes. The device-typical band checks
-   are advisory only: the cusp low-frequency interchange/flute instability scale 0.1–100 kHz (J. Berkowitz et al., Proc. 2nd UN Conf. Peaceful Uses of Atomic Energy 31 (1958) 171) and the ICRF-to-ECRH drive range 1 MHz–200 GHz.
+   are advisory only and compare against declared synthetic design bounds:
+   an interchange/flute band of 0.1–100 kHz, a drive band of 1 MHz–200 GHz
+   and a ~1 s confinement-duration bound. An earlier version credited them
+   to J. Berkowitz et al., Proc. 2nd UN Conf. Peaceful Uses of Atomic Energy
+   31 (1958) 171, and R. F. Post (1987), neither of which is on file, so
+   they were never checked against them (attribution removed 2026-10-31).
 5. The reference plan mirrors canonical practice with synthetic
    declarations: a cusp-loss probe set and a diamagnetic loop (noncyclic against the plasma build-up epoch), an RF drive-phase reference (direct cyclic against the facility clock), a flute-mode probe array (derived cyclic against the facility clock), and the model-owned synthetic oscillator (simulation clock). Every applicable candidate must be
    planned or explicitly deferred with a reason; every channel is

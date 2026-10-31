@@ -418,9 +418,9 @@ class DiagnosticPlan:
                         message=(
                             "declared interchange/flute band "
                             f"{channel.max_signal_frequency_hz:.1f} "
-                            "Hz is outside the cusp low-frequency "
-                            "instability scale 0.1-100 kHz "
-                            "(Berkowitz et al. 1958)"
+                            "Hz is outside the declared interchange/flute "
+                            "design band 0.1-100 kHz (synthetic; not "
+                            "checked against a source on file)"
                         ),
                     )
                 )
@@ -433,9 +433,9 @@ class DiagnosticPlan:
                         message=(
                             "declared drive frequency "
                             f"{channel.max_signal_frequency_hz:.1f} "
-                            "Hz is outside the ICRF-to-ECRH heating range "
-                            "1 MHz-200 GHz used on cusp experiments "
-                            "(Post 1987)"
+                            "Hz is outside the declared drive design band "
+                            "1 MHz-200 GHz (synthetic; not checked against "
+                            "a source on file)"
                         ),
                     )
                 )
@@ -446,8 +446,8 @@ class DiagnosticPlan:
                         message=(
                             "acquisition window "
                             f"{channel.acquisition_duration_s:.2e} s is "
-                            "longer than the cusp confinement scale of up to ~1 "
-                            "s (Berkowitz et al. 1958)"
+                            "longer than the declared ~1 s confinement-duration "
+                            "bound (synthetic; not checked against a source on file)"
                         ),
                     )
                 )
