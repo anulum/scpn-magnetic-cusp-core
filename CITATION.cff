@@ -13,9 +13,12 @@ type: software
 title: SCPN Magnetic Cusp Core
 abstract: >-
   Governed device-family repository for the magnetic-cusp configuration
-  within the SCPN Reactor Systems Research Group. Currently
-  architecture-only: boundary contracts, CONTROL adapter specification, and
-  validation tooling, with no implemented reactor capability.
+  within the SCPN Reactor Systems Research Group. Evidence maturity
+  computational_prototype with two implemented capabilities: a validated
+  device configuration model with documented consistency estimates, and
+  diagnostic and clock semantics aligned with the SCPN Phase Orchestrator
+  observability catalogue. All parameter sets are synthetic; no real
+  machine is described, and the claim inventory is empty.
 authors:
   - family-names: Šotek
     given-names: Miroslav
